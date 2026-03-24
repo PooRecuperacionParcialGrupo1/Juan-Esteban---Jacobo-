@@ -10,9 +10,9 @@ package Tipo1;
  */
 public class Camion extends Vehiculo{
     
-    double capacidadCargaToneladas;
-    String atrDestino;
-    double atrDistanciaKm;
+    private double capacidadCargaToneladas;
+    private String atrDestino;
+    private double atrDistanciaKm;
 
     public Camion(double capacidadCargaToneladas, String atrDestino, double atrDistanciaKm, String placa, String modelo, String marca) {
         super(placa, modelo, marca);
