@@ -21,6 +21,18 @@ public class Camion extends Vehiculo{
         this.atrDistanciaKm = atrDistanciaKm;
     }
 
+    public double getCapacidadCargaToneladas() {
+        return capacidadCargaToneladas;
+    }
+
+    public String getAtrDestino() {
+        return atrDestino;
+    }
+
+    public double getAtrDistanciaKm() {
+        return atrDistanciaKm;
+    }
+
     @Override
     double calcularAutonomia() {
         return 500 - capacidadCargaToneladas;
@@ -37,4 +49,10 @@ public class Camion extends Vehiculo{
     public void asignarRuta(String atrDestino, double atrDistanciaKm){
         System.out.println("Ruta asignada al " + atrDestino + ". Distancia total: " + atrDistanciaKm + " km. Preparando logística pesada.");
     }
+    
+    @Override
+    String mostrarInformacionGeneral(){
+        return super.mostrarInformacionGeneral() + "Camion{" + "capacidadCargaToneladas=" + capacidadCargaToneladas + ", atrDestino=" + atrDestino + ", atrDistanciaKm=" + atrDistanciaKm + '}';
+    }
+    
 }

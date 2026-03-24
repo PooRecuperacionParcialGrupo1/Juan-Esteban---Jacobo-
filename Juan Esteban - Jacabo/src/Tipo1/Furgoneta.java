@@ -10,16 +10,25 @@ package Tipo1;
  */
 public class Furgoneta extends Vehiculo{
     
-    double volumenLitros;
+    private double volumenLitros;
 
     public Furgoneta(double volumenLitros, String placa, String modelo, String marca) {
         super(placa, modelo, marca);
         this.volumenLitros = volumenLitros;
     }
 
+    public double getVolumenLitros() {
+        return volumenLitros;
+    }
+    
     @Override
     double calcularAutonomia() {
         return 500 + volumenLitros;
+    }
+    
+    @Override
+    String mostrarInformacionGeneral(){
+        return super.mostrarInformacionGeneral() + "Furgoneta{" + "volumenLitros=" + volumenLitros + '}';
     }
     
 }
