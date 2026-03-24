@@ -19,10 +19,9 @@ public abstract class Vehiculo {
         this.marca = marca;
     }
     
-    abstract float calcularAutonomia();
+    abstract double calcularAutonomia();
     String mostrarInformacionGeneral(){
         return "Vehiculo{" + "placa=" + placa + ", modelo=" + modelo + ", marca=" + marca + '}';
     }
 
-    
 }
